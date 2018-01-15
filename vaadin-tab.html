@@ -1,0 +1,96 @@
+<link rel="import" href="color.html">
+<link rel="import" href="typography.html">
+
+<link rel="import" href="../vaadin-tabs/src/vaadin-tab.html">
+
+<dom-module id="material-tab" theme-for="vaadin-tab">
+  <template>
+    <style>
+      :host {
+        box-sizing: border-box;
+        padding: 4px 12px;
+        font-family: var(--material-font-family);
+        font-size: var(--material-body-font-size);
+        text-transform: uppercase;
+        word-wrap: break-word;
+        overflow: hidden;
+        line-height: 1;
+        font-weight: 500;
+        opacity: 1;
+        color: var(--material-secondary-text-color);
+        transition: 0.2s color, 0.2s transform;
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+        transform-origin: 50% 100%;
+        outline: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      :host(:hover),
+      :host(:focus),
+      :host([focus-ring]) {
+        color: var(--material-body-text-color);
+        background-color: var(--material-divider-color);
+      }
+
+      :host([selected]:not(:focus)) {
+        color: var(--material-body-text-color);
+        background-color: transparent;
+        transition: 0.6s color;
+      }
+
+      :host([active]:not([selected])) {
+        color: var(--material-body-text-color);
+        background-color: var(--material-background-color);
+        transition: 0.1s background-color cubic-bezier(0.4, 0, 1, 1);
+      }
+
+      :host::before,
+      :host::after {
+        content: "";
+        position: absolute;
+        display: var(--_material-tab-marker-display, block);
+        bottom: 0;
+        left: 50%;
+        width: 100%;
+        max-width: 100%;
+        height: 2px;
+        max-height: 80%;
+        background-color: var(--material-background-color);
+        border-radius: 0 0 0 0;
+        transform: translateX(-50%) scale(0);
+        transform-origin: 50% 100%;
+        transition: 0.14s transform cubic-bezier(.12, .32, .54, 1);
+        will-change: transform;
+      }
+
+      :host([selected])::before,
+      :host([selected])::after {
+        background-color: var(--material-primary-color);
+      }
+
+      :host([theme~="icon-on-top"]) {
+        height: 72px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 1em;
+      }
+
+      :host([theme~="icon-on-top"]) ::slotted(iron-icon) {
+        margin: 0 0 8px 0;
+      }
+
+      /* Disabled */
+
+      :host([disabled]) {
+        pointer-events: none;
+        opacity: 1;
+        color: var(--material-disabled-text-color);
+      }
+    </style>
+  </template>
+</dom-module>

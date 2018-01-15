@@ -1,0 +1,320 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Material Theme Tabs</title>
+
+  <script src="../../webcomponentsjs/webcomponents-loader.js"></script>
+  <link rel="import" href="common.html">
+
+  <link rel="import" href="../vaadin-tabs.html">
+
+  <link rel="import" href="../../iron-icons/iron-icons.html">
+
+  <style>
+    [unresolved] {
+      opacity: 0;
+    }
+
+    nice-demo-snippet {
+      padding-top: 20px;
+    }
+
+    div[theme="dark"] nice-demo-snippet {
+      --nice-demo-snippet-code-background-color: #f7f7f7;
+      --nice-demo-snippet-view-source-background-color: #070707;
+      --nice-demo-snippet-code-color: #000000;
+    }
+  </style>
+</head>
+
+<body unresolved>
+
+  <div class="vertical-section-container centered">
+
+    <demo-navigation>
+      <span slot="header">Material</span>
+    </demo-navigation>
+
+    <h1>Tabs</h1>
+
+    <h3 demo-section>Default configuration</h3>
+    <nice-demo-snippet>
+      <template slot="source">
+        <vaadin-tabs>
+          <vaadin-tab>Tab one</vaadin-tab>
+          <vaadin-tab>Tab two</vaadin-tab>
+          <vaadin-tab>Tab three with a long name</vaadin-tab>
+        </vaadin-tabs>
+      </template>
+    </nice-demo-snippet>
+
+    <h3 demo-section>Tabs with fixed width</h3>
+    <nice-demo-snippet>
+      <template slot="source">
+        <vaadin-tabs theme="fixed">
+          <vaadin-tab>Tab one</vaadin-tab>
+        </vaadin-tabs>
+      </template>
+    </nice-demo-snippet>
+
+    <nice-demo-snippet>
+      <template slot="source">
+        <vaadin-tabs theme="fixed">
+          <vaadin-tab>Tab one</vaadin-tab>
+          <vaadin-tab>Tab two</vaadin-tab>
+        </vaadin-tabs>
+      </template>
+    </nice-demo-snippet>
+
+    <nice-demo-snippet>
+      <template slot="source">
+        <vaadin-tabs theme="fixed">
+          <vaadin-tab>Tab one</vaadin-tab>
+          <vaadin-tab>Tab two</vaadin-tab>
+          <vaadin-tab>Tab three with a long name</vaadin-tab>
+        </vaadin-tabs>
+      </template>
+    </nice-demo-snippet>
+
+    <h3 demo-section>Scrollable tabs</h3>
+    <nice-demo-snippet>
+      <template slot="source">
+        <vaadin-tabs>
+          <vaadin-tab>Tab one</vaadin-tab>
+          <vaadin-tab>Tab two</vaadin-tab>
+          <vaadin-tab>Tab three</vaadin-tab>
+          <vaadin-tab>Tab four</vaadin-tab>
+          <vaadin-tab>Tab five</vaadin-tab>
+          <vaadin-tab>Tab six</vaadin-tab>
+          <vaadin-tab>Tab seven</vaadin-tab>
+          <vaadin-tab>Tab eight</vaadin-tab>
+          <vaadin-tab>Tab nine</vaadin-tab>
+          <vaadin-tab>Tab ten</vaadin-tab>
+          <vaadin-tab>Tab eleven</vaadin-tab>
+          <vaadin-tab>Tab twelve</vaadin-tab>
+          <vaadin-tab>Tab thirteen</vaadin-tab>
+          <vaadin-tab>Tab fourteen</vaadin-tab>
+          <vaadin-tab>Tab fifteen</vaadin-tab>
+        </vaadin-tabs>
+      </template>
+    </nice-demo-snippet>
+
+    <h3 demo-section>Disabled tabs</h3>
+    <nice-demo-snippet>
+      <template slot="source">
+        <vaadin-tabs>
+          <vaadin-tab>Tab one</vaadin-tab>
+          <vaadin-tab>Tab two</vaadin-tab>
+          <vaadin-tab disabled>Disabled tab</vaadin-tab>
+          <vaadin-tab>Tab four</vaadin-tab>
+          <vaadin-tab>Tab five</vaadin-tab>
+        </vaadin-tabs>
+      </template>
+    </nice-demo-snippet>
+
+    <h3 demo-section>Icons and text</h3>
+
+    <nice-demo-snippet>
+      <template slot="source">
+        <vaadin-tabs>
+          <vaadin-tab theme="icon-on-top">
+            <iron-icon icon="alarm"></iron-icon>
+            <span>Tab one</span>
+          </vaadin-tab>
+          <vaadin-tab theme="icon-on-top">
+            <iron-icon icon="face"></iron-icon>
+            <span>Tab two</span>
+          </vaadin-tab>
+          <vaadin-tab theme="icon-on-top">
+            <iron-icon icon="info"></iron-icon>
+            <span>Tab three</span>
+          </vaadin-tab>
+        </vaadin-tabs>
+      </template>
+    </nice-demo-snippet>
+
+    <h3 demo-section>Icons and text with fixed width</h3>
+
+    <nice-demo-snippet>
+      <template slot="source">
+        <vaadin-tabs theme="fixed">
+          <vaadin-tab theme="icon-on-top">
+            <iron-icon icon="alarm"></iron-icon>
+            <span>Tab one</span>
+          </vaadin-tab>
+          <vaadin-tab theme="icon-on-top">
+            <iron-icon icon="face"></iron-icon>
+            <span>Tab two</span>
+          </vaadin-tab>
+        </vaadin-tabs>
+      </template>
+    </nice-demo-snippet>
+
+    <nice-demo-snippet>
+      <template slot="source">
+        <vaadin-tabs theme="fixed">
+          <vaadin-tab theme="icon-on-top">
+            <iron-icon icon="alarm"></iron-icon>
+            <span>Tab one</span>
+          </vaadin-tab>
+          <vaadin-tab theme="icon-on-top">
+            <iron-icon icon="face"></iron-icon>
+            <span>Tab two</span>
+          </vaadin-tab>
+          <vaadin-tab theme="icon-on-top">
+            <iron-icon icon="info"></iron-icon>
+            <span>Tab three</span>
+          </vaadin-tab>
+        </vaadin-tabs>
+      </template>
+    </nice-demo-snippet>
+
+    <h3 demo-section>Icons only</h3>
+    <nice-demo-snippet>
+      <template slot="source">
+        <vaadin-tabs>
+          <vaadin-tab>
+            <iron-icon icon="alarm"></iron-icon>
+          </vaadin-tab>
+          <vaadin-tab>
+            <iron-icon icon="face"></iron-icon>
+          </vaadin-tab>
+          <vaadin-tab>
+            <iron-icon icon="info"></iron-icon>
+          </vaadin-tab>
+        </vaadin-tabs>
+      </template>
+    </nice-demo-snippet>
+
+    <hr>
+
+    <h3 demo-section>Dark theme default configuration</h3>
+
+    <div theme="dark">
+      <nice-demo-snippet>
+        <template slot="source">
+          <vaadin-tabs>
+            <vaadin-tab>Tab one</vaadin-tab>
+            <vaadin-tab>Tab two</vaadin-tab>
+            <vaadin-tab>Tab three</vaadin-tab>
+          </vaadin-tabs>
+        </template>
+      </nice-demo-snippet>
+    </div>
+
+    <h3 demo-section>Tabs with fixed width</h3>
+    <div theme="dark">
+      <nice-demo-snippet>
+        <template slot="source">
+          <vaadin-tabs theme="fixed">
+            <vaadin-tab>Tab one</vaadin-tab>
+            <vaadin-tab>Tab two</vaadin-tab>
+            <vaadin-tab>Tab three</vaadin-tab>
+          </vaadin-tabs>
+        </template>
+      </nice-demo-snippet>
+    </div>
+
+    <h3 demo-section>Dark theme scrollable tabs</h3>
+    <div theme="dark">
+      <nice-demo-snippet>
+        <template slot="source">
+          <vaadin-tabs>
+            <vaadin-tab>Tab one</vaadin-tab>
+            <vaadin-tab>Tab two</vaadin-tab>
+            <vaadin-tab>Tab three</vaadin-tab>
+            <vaadin-tab>Tab four</vaadin-tab>
+            <vaadin-tab>Tab five</vaadin-tab>
+            <vaadin-tab>Tab six</vaadin-tab>
+            <vaadin-tab>Tab seven</vaadin-tab>
+            <vaadin-tab>Tab eight</vaadin-tab>
+            <vaadin-tab>Tab nine</vaadin-tab>
+            <vaadin-tab>Tab ten</vaadin-tab>
+            <vaadin-tab>Tab eleven</vaadin-tab>
+            <vaadin-tab>Tab twelve</vaadin-tab>
+            <vaadin-tab>Tab thirteen</vaadin-tab>
+            <vaadin-tab>Tab fourteen</vaadin-tab>
+            <vaadin-tab>Tab fifteen</vaadin-tab>
+          </vaadin-tabs>
+        </template>
+      </nice-demo-snippet>
+    </div>
+
+    <h3 demo-section>Dark theme disabled tabs</h3>
+    <div theme="dark">
+      <nice-demo-snippet>
+        <template slot="source">
+          <vaadin-tabs>
+            <vaadin-tab>Tab one</vaadin-tab>
+            <vaadin-tab>Tab two</vaadin-tab>
+            <vaadin-tab disabled>Disabled tab</vaadin-tab>
+            <vaadin-tab>Tab four</vaadin-tab>
+            <vaadin-tab>Tab five</vaadin-tab>
+          </vaadin-tabs>
+        </template>
+      </nice-demo-snippet>
+    </div>
+
+    <h3 demo-section>Dark theme icons</h3>
+    <div theme="dark">
+      <nice-demo-snippet>
+        <template slot="source">
+          <vaadin-tabs>
+            <vaadin-tab theme="icon-on-top">
+              <iron-icon icon="alarm"></iron-icon>
+              <span>Tab one</span>
+            </vaadin-tab>
+            <vaadin-tab theme="icon-on-top">
+              <iron-icon icon="face"></iron-icon>
+              <span>Tab two</span>
+            </vaadin-tab>
+            <vaadin-tab theme="icon-on-top">
+              <iron-icon icon="info"></iron-icon>
+              <span>Tab three</span>
+            </vaadin-tab>
+          </vaadin-tabs>
+        </template>
+      </nice-demo-snippet>
+    </div>
+
+    <h3 demo-section>Dark theme icons only</h3>
+    <div theme="dark">
+      <nice-demo-snippet>
+        <template slot="source">
+          <vaadin-tabs>
+            <vaadin-tab>
+              <iron-icon icon="alarm"></iron-icon>
+            </vaadin-tab>
+            <vaadin-tab>
+              <iron-icon icon="face"></iron-icon>
+            </vaadin-tab>
+            <vaadin-tab>
+              <iron-icon icon="info"></iron-icon>
+            </vaadin-tab>
+          </vaadin-tabs>
+        </template>
+      </nice-demo-snippet>
+    </div>
+
+    <h2 demo-section>Styling API</h2>
+
+    <div class="note warn">
+      <p>Read the <b><a href="customization.html">customization instructions</a></b> to learn how to customize the component styles.</p>
+    </div>
+
+    <!-- <h3>Custom properties</h3>
+
+    <dl class="custom-properties">
+    </dl> -->
+
+    <h3>Shadow parts and states</h3>
+
+    <p>See the <a href="https://vaadin.com/elements/vaadin-tabs/html-api/">API documentation for vaadin-tabs</a>.</p>
+
+  </div>
+</body>
+</html>
