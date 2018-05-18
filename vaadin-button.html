@@ -8,13 +8,14 @@
     <style>
       :host {
         display: inline-flex;
-        align-items: center;
+        align-items: baseline;
         justify-content: center;
         border-radius: 4px;
         color: var(--material-body-text-color);
         font-family: var(--material-font-family);
         text-transform: uppercase;
         font-size: var(--material-button-font-size);
+        line-height: 20px;
         font-weight: 500;
         letter-spacing: 0.05em;
         overflow: hidden;
@@ -24,16 +25,21 @@
         -moz-osx-font-smoothing: grayscale;
         z-index: 0;
         margin: 8px;
-        padding: 0 16px;
+        padding: 8px 16px;
         min-width: 64px;
-        min-height: 36px;
         box-sizing: border-box;
+      }
+
+      @-moz-document url-prefix() {
+        :host {
+          vertical-align: -21px;
+        }
       }
 
       /* Dense style */
       :host([theme~="dense"]) {
-        font-size: var(--material-caption-font-size);
-        min-height: 32px;
+        padding-top: 6px;
+        padding-bottom: 6px;
       }
 
       :host::before,
