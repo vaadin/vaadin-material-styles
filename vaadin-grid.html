@@ -131,6 +131,15 @@
       :host([navigating]) [part~="cell"]:focus {
         box-shadow: inset 0 0 0 2px var(--material-primary-color);
       }
+
+      /* Dense variant */
+      :host([theme~="dense"]) [part~="cell"] {
+        min-height: 32px;
+      }
+
+      :host([theme~="dense"]) [part~="cell"] ::slotted(vaadin-grid-cell-content) {
+        padding: 4px 16px;
+      }
     </style>
   </template>
 </dom-module>
