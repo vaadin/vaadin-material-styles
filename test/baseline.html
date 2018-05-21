@@ -17,22 +17,13 @@
             180deg,
             transparent,
             transparent 55px,
+            rgba(0, 0, 0, 0.25) 55px,
             rgba(0, 0, 0, 0.25) 56px,
-            transparent 57px,
+            transparent 56px,
             transparent
           );
           background-size: 100px 100px;
           background-repeat: repeat;
-        }
-
-        /* Test for common CSS reset */
-        * {
-          box-sizing: border-box;
-        }
-
-        vaadin-split-layout {
-          width: 100vw;
-          height: 100vh;
         }
 
         vaadin-context-menu,
@@ -48,26 +39,84 @@
   </head>
   <body unresolved>
 
-    Baseline <br>
-
+    Baseline
+    
+    <br> &lt;vaadin-text-field&gt;
     zzz
-    <vaadin-text-field value="zzz no label"></vaadin-text-field>
-
+    <vaadin-text-field value="zzz only value"></vaadin-text-field>
     zzz
-    <vaadin-text-field label="zzz label"></vaadin-text-field>
-
+    <vaadin-text-field label="zzz only label"></vaadin-text-field>
     zzz
-    <vaadin-text-field label="with label" value="zzz"></vaadin-text-field>
+    <vaadin-text-field label="zzz label" value="zzz value"></vaadin-text-field>
 
+    <br> &lt;vaadin-password-field&gt;
     zzz
-    <vaadin-combo-box label="with label"></vaadin-combo-box>
+    <vaadin-password-field value="zzz only value" password-visible></vaadin-password-field>
+    zzz
+    <vaadin-password-field label="zzz only label" password-visible></vaadin-password-field>
+    zzz
+    <vaadin-password-field label="zzz label" value="zzz value" password-visible></vaadin-password-field>
 
+    <div style="height: 100px;">
+    &lt;vaadin-text-area&gt;
+    zzz
+    <vaadin-text-area value="zzz only value" rows="1"></vaadin-text-area>
+    zzz
+    <vaadin-text-area label="zzz only label" rows="1"></vaadin-text-area>
+    zzz
+    <vaadin-text-area label="zzz label" value="zzz value"></vaadin-text-area>
+    </div>
+
+    <br> &lt;vaadin-combo-box&gt;
+    zzz
+    <vaadin-combo-box value="zzz only value" allow-custom-value></vaadin-combo-box>
+    zzz
+    <vaadin-combo-box label="zzz only label" allow-custom-value></vaadin-combo-box>
+    zzz
+    <vaadin-combo-box label="zzz label" value="zzz value" allow-custom-value></vaadin-combo-box>
+
+    <br> &lt;vaadin-date-picker&gt;
+    zzz
+    <vaadin-date-picker value="2010-01-01"></vaadin-date-picker>
+    zzz
+    <vaadin-date-picker label="zzz only label"></vaadin-date-picker>
+    zzz
+    <vaadin-date-picker label="zzz label" value="2010-01-01"></vaadin-date-picker>
+
+    <br> &lt;vaadin-dropdown-menu&gt;
+    zzz
+    <vaadin-dropdown-menu value="zzz">
+      <template>
+        <vaadin-list-box>
+          <vaadin-item>zzz</vaadin-item>
+          <vaadin-item>xxx</vaadin-item>
+        </vaadin-list-box>
+      </template>
+    </vaadin-dropdown-menu>
+    zzz
+    <vaadin-dropdown-menu label="zzz only label">
+      <template>
+        <vaadin-list-box>
+          <vaadin-item>zzz</vaadin-item>
+          <vaadin-item>xxx</vaadin-item>
+        </vaadin-list-box>
+      </template>
+    </vaadin-dropdown-menu>
+    zzz
+    <vaadin-dropdown-menu label="zzz label" value="zzz">
+      <template>
+        <vaadin-list-box>
+          <vaadin-item>zzz</vaadin-item>
+          <vaadin-item>xxx</vaadin-item>
+        </vaadin-list-box>
+      </template>
+    </vaadin-dropdown-menu>
+
+    <br> &lt;vaadin-button&gt;
     zzz
     <vaadin-button>zzz</vaadin-button>
-
     zzz
     <vaadin-button theme="outlined">zzz</vaadin-button>
-
     zzz
     <vaadin-button theme="contained">zzz</vaadin-button>
 
