@@ -36,12 +36,23 @@
     <p>If you are not importing any element themes, and want to use the font properties, you need to import them manually.</p>
     <nice-demo-snippet code-only>
       <template slot="source">
-        <link rel="import" href="bower_components/vaadin-material-theme/typography.html">
+        <link rel="import" href="bower_components/vaadin-material-styles/typography.html">
       </template>
     </nice-demo-snippet>
-    <div class="note">
-      <p>Importing the typography modules imports the Roboto font from <a href="https://fonts.google.com/specimen/Roboto">Google Fonts</a> automatically.</p>
-    </div>
+
+    <h3>Importing the Roboto</h3>
+
+    <p>Starting from the 2.0.0, the typography modules no longer imports the Roboto font automatically.</p>
+
+    <p>
+      You can still import it from <a href="https://fonts.google.com/specimen/Roboto">Google Fonts</a>,
+      or import the style module, as demonstrated below:
+    </p>
+    <nice-demo-snippet code-only>
+      <template slot="source">
+        <link rel="import" href="bower_components/vaadin-material-styles/font-roboto.html">
+      </template>
+    </nice-demo-snippet>
 
     <h2 demo-section>Global typography styles</h2>
     <p>To easily apply basic typographic styles for your app, include the following style module in the global scope. It will set the font family, font size and line height for the body element, as well as specify consistent header styles.</p>
@@ -67,7 +78,10 @@
     </nice-demo-snippet>
 
     <h2 demo-section>Font family</h2>
-    <p>The Roboto font is used by default. You can apply or change the font family using the <code>--material-font-family</code> custom property.</p>
+    <p>
+      The Roboto font is used by default. You can change the font family using the <code>--material-font-family</code> custom property.
+      In that case, you should not import <code>font-roboto.html</code> and provide a font you need.
+    </p>
 
     <nice-demo-snippet code-only>
       <template slot="source">
