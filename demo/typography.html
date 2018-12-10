@@ -46,11 +46,22 @@
 
     <p>
       You can still import it from <a href="https://fonts.google.com/specimen/Roboto">Google Fonts</a>,
-      or import the style module, as demonstrated below:
+      or import the CSS file in the end of the <code>index.html</code>, as demonstrated below:
     </p>
     <nice-demo-snippet code-only>
       <template slot="source">
-        <link rel="import" href="bower_components/vaadin-material-styles/font-roboto.html">
+        <link rel="stylesheet" href="bower_components/vaadin-material-styles/font-roboto.css">
+      </template>
+    </nice-demo-snippet>
+
+    <p>
+      When bundling for production using Polymer CLI, add the following line in the <code>polymer.json</code>:
+    </p>
+    <nice-demo-snippet code-only>
+      <template slot="source">
+        "extraDependencies": [
+          "bower_components/vaadin-material-styles/fonts/**/*"
+        ]
       </template>
     </nice-demo-snippet>
 
