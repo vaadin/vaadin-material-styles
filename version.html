@@ -11,7 +11,9 @@
       }
     }
 
-    customElements.define('vaadin-material-styles', Material);
+    if (!customElements.get('vaadin-material-styles')) {
+      customElements.define('vaadin-material-styles', Material);
+    }
 
     window.Vaadin.Material = Material;
   })();
