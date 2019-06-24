@@ -2,9 +2,6 @@
 <link rel="import" href="../polymer/lib/elements/custom-style.html">
 <link rel="import" href="../polymer/lib/elements/dom-module.html">
 
-<!-- Import Roboto from Google Fonts -->
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" crossorigin="anonymous">
-
 <custom-style>
   <style>
     html {
@@ -106,3 +103,17 @@
     </style>
   </template>
 </dom-module>
+
+<script>
+  /** @export */
+  window.polymerSkipLoadingFontRoboto;
+  if (!window.polymerSkipLoadingFontRoboto) {
+    const font = 'https://fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,300,300italic,400italic,500,500italic,700,700italic';
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.crossOrigin = 'anonymous';
+    link.href = font;
+    document.head.appendChild(link);
+  }
+</script>
