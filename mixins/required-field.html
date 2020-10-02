@@ -4,19 +4,10 @@
   <template>
     <style>
       [part="label"] {
-        display: block;
-        position: absolute;
-        top: 8px;
-        font-size: 1em;
-        line-height: 1;
-        height: 20px;
-        margin-bottom: -4px;
-        white-space: nowrap;
-        overflow-x: hidden;
-        text-overflow: ellipsis;
-        color: var(--material-secondary-text-color);
-        transform-origin: 0 75%;
-        transform: scale(0.75);
+        font-size: var(--material-caption-font-size);
+        font-weight: var(--material-font-weight-normal);
+        letter-spacing: var(--material-caption-letter-spacing);
+        line-height: var(--material-caption-line-height);
       }
 
       :host([required]) [part="label"]::after {
@@ -29,32 +20,7 @@
       }
 
       [part="error-message"] {
-        font-size: .75em;
-        line-height: 1;
         color: var(--material-error-text-color);
-      }
-
-      /* Margin that doesn’t reserve space when there’s no error message */
-      [part="error-message"]:not(:empty)::before {
-        content: "";
-        display: block;
-        height: 6px;
-      }
-
-      :host(:not([invalid])) [part="error-message"] {
-        margin-top: 0;
-        max-height: 0;
-        overflow: hidden;
-      }
-
-      :host([invalid]) [part="error-message"] {
-        animation: reveal 0.2s;
-      }
-
-      @keyframes reveal {
-        0% {
-          opacity: 0;
-        }
       }
     </style>
   </template>
