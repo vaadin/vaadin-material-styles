@@ -13,18 +13,60 @@
 
       /* Font sizes */
       --material-h1-font-size: 6rem;
-      --material-h2-font-size: 3.75rem;
-      --material-h3-font-size: 3rem;
-      --material-h4-font-size: 2.125rem;
-      --material-h5-font-size: 1.5rem;
-      --material-h6-font-size: 1.25rem;
-      --material-body-font-size: 1rem;
-      --material-small-font-size: 0.875rem;
-      --material-button-font-size: 0.875rem;
-      --material-caption-font-size: 0.75rem;
+      --material-h1-line-height: 7rem;
+      --material-h1-letter-spacing: -0.015625em;
 
-      /* Icon size */
-      --material-icon-font-size: 20px;
+      --material-h2-font-size: 3.75rem;
+      --material-h2-line-height: 4.5rem;
+      --material-h2-letter-spacing: -0.0083333333em;
+
+      --material-h3-font-size: 3rem;
+      --material-h3-line-height: 3.5rem;
+      --material-h3-letter-spacing: normal;
+
+      --material-h4-font-size: 2.125rem;
+      --material-h4-line-height: 2.25rem;
+      --material-h4-letter-spacing: 0.0073529412em;
+
+      --material-h5-font-size: 1.5rem;
+      --material-h5-line-height: 1.5rem;
+      --material-h5-letter-spacing: normal;
+
+      --material-h6-font-size: 1.25rem;
+      --material-h6-line-height: 1.5rem;
+      --material-h6-letter-spacing: 0.0075em;
+
+      --material-subtitle1-font-size: 1rem;
+      --material-subtitle1-line-height: 1.5rem;
+      --material-subtitle1-letter-spacing: 0.009375em;
+
+      --material-subtitle2-font-size: 0.875rem;
+      --material-subtitle2-line-height: 1.5re
+      --material-subtitle2-letter-spacing: 0.0071428571em;
+
+      --material-body1-font-size: 1rem;
+      --material-body1-line-height: 1.5rem;
+      --material-body1-letter-spacing: 0.03125em;
+
+      --material-body2-font-size: 0.875rem;
+      --material-body2-line-height: 1.25rem;
+      --material-body2-letter-spacing: 0.0178571429em;
+
+      --material-button-font-size: 0.875rem;
+      --material-button-line-height: 1rem;
+      --material-button-letter-spacing: 0.0892857143em;
+
+      --material-caption-font-size: 0.75rem;
+      --material-caption-line-height: 1rem;
+      --material-caption-letter-spacing: 0.0333333333em;
+
+      --material-overline-font-size: 0.625rem;
+      --material-overline-line-height: 1rem;
+      --material-overline-letter-spacing: 0.15em;
+
+      --material-font-weight-light: 300;
+      --material-font-weight-normal: 400;
+      --material-font-weight-medium: 500;
     }
   </style>
 </custom-style>
@@ -33,75 +75,112 @@
   <template>
     <style>
       body {
+        color: var(--material-body-text-color);
         font-family: var(--material-font-family);
-        font-size: var(--material-body-font-size);
-        line-height: 1.4;
-        -webkit-text-size-adjust: 100%;
+        font-size: var(--material-body1-font-size);
+        line-height: var(--material-body1-line-height);
+
         -webkit-font-smoothing: antialiased;
+        -webkit-text-size-adjust: 100%;
         -moz-osx-font-smoothing: grayscale;
       }
 
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        color: inherit;
-        line-height: 1.1;
-        margin-top: 1.5em;
+      h1, h2, h3, h4, h5, h6 {
+        margin: 0;
       }
 
-      h1 {
+      h1, .h1 {
+        font-size: var(--material-h1-font-size);
+        font-weight: var(--material-font-weight-light);
+        letter-spacing: var(--material-h1-letter-spacing);
+        line-height: var(--material-h1-line-height);
+      }
+      h2, .h2 {
+        font-size: var(--material-h2-font-size);
+        font-weight: var(--material-font-weight-light);
+        letter-spacing: var(--material-h2-letter-spacing);
+        line-height: var(--material-h2-line-height);
+      }
+      h3, .h3 {
         font-size: var(--material-h3-font-size);
-        font-weight: 300;
-        letter-spacing: -0.015em;
-        margin-bottom: 1em;
-        text-indent: -0.07em;
+        font-weight: var(--material-font-weight-normal);
+        letter-spacing: var(--material-h3-letter-spacing);
+        line-height: var(--material-h3-line-height);
       }
-
-      h2 {
+      h4, .h4 {
         font-size: var(--material-h4-font-size);
-        font-weight: 300;
-        letter-spacing: -0.01em;
-        margin-bottom: 0.75em;
-        text-indent: -0.07em;
+        font-weight: var(--material-font-weight-normal);
+        letter-spacing: var(--material-h4-letter-spacing);
+        line-height: var(--material-h4-line-height);
       }
-
-      h3 {
+      h5, .h5 {
         font-size: var(--material-h5-font-size);
-        font-weight: 400;
-        margin-bottom: 0.75em;
-        text-indent: -0.05em;
+        font-weight: var(--material-font-weight-normal);
+        letter-spacing: var(--material-h5-letter-spacing);
+        line-height: var(--material-h5-line-height);
       }
-
-      h4 {
+      h6, .h6 {
         font-size: var(--material-h6-font-size);
-        font-weight: 400;
-        letter-spacing: 0.01em;
-        margin-bottom: 0.75em;
-        text-indent: -0.05em;
+        font-weight: var(--material-font-weight-medium);
+        letter-spacing: var(--material-h6-letter-spacing);
+        line-height: var(--material-h6-line-height);
+      }
+      .subtitle1 {
+        font-size: var(--material-subtitle1-font-size);
+        font-weight: var(--material-font-weight-normal);
+        letter-spacing: var(--material-subtitle1-letter-spacing);
+        line-height: var(--material-subtitle1-line-height);
+      }
+      .subtitle2 {
+        font-size: var(--material-subtitle2-font-size);
+        font-weight: var(--material-font-weight-medium);
+        letter-spacing: var(--material-subtitle2-letter-spacing);
+        line-height: var(--material-subtitle2-line-height);
+      }
+      .body1 {
+        font-size: var(--material-body1-font-size);
+        font-weight: var(--material-font-weight-normal);
+        letter-spacing: var(--material-body1-letter-spacing);
+        line-height: var(--material-body1-line-height);
+      }
+      .body2 {
+        font-size: var(--material-body2-font-size);
+        font-weight: var(--material-font-weight-normal);
+        letter-spacing: var(--material-body2-letter-spacing);
+        line-height: var(--material-body2-line-height);
+      }
+      .button {
+        font-size: var(--material-button-font-size);
+        font-weight: var(--material-font-weight-medium);
+        letter-spacing: var(--material-button-letter-spacing);
+        line-height: var(--material-button-line-height);
+      }
+      .caption {
+        font-size: var(--material-caption-font-size);
+        font-weight: var(--material-font-weight-normal);
+        letter-spacing: var(--material-caption-letter-spacing);
+        line-height: var(--material-caption-line-height);
+      }
+      .overline {
+        font-size: var(--material-overline-font-size);
+        font-weight: var(--material-font-weight-normal);
+        letter-spacing: var(--material-overline-letter-spacing);
+        line-height: var(--material-overline-line-height);
+        text-transform: uppercase;
       }
 
-      h5 {
-        font-size: var(--material-body-font-size);
-        font-weight: 500;
-        margin-bottom: 0.5em;
-        text-indent: -0.025em;
+      .font-weight-light {
+        font-weight: var(--material-font-weight-light);
+      }
+      .font-weight-normal {
+        font-weight: var(--material-font-weight-normal);
+      }
+      .font-weight-medium {
+        font-weight: var(--material-font-weight-medium);
       }
 
-      h6 {
-        font-size: var(--material-small-font-size);
-        font-weight: 500;
-        letter-spacing: 0.01em;
-        margin-bottom: 0.25em;
-        text-indent: -0.025em;
-      }
-
-      a,
-      b,
-      strong {
-        font-weight: 500;
+      b, strong {
+        font-weight: var(--material-font-weight-medium);
       }
     </style>
   </template>
