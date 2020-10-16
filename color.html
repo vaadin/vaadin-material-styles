@@ -126,12 +126,12 @@ MAGI ADD END -->
 </dom-module>
 <!-- MAGI REMOVE END -->
 <!-- MAGI ADD START
-`;
-Vaadin.registerStyles('', colorLight, {moduleId: 'material-color-light'});
+    `;
+    Vaadin.registerStyles('', colorLight, {moduleId: 'material-color-light'});
 
-Vaadin.MaterialStyles.colorLight = colorLight;
+    Vaadin.MaterialStyles.colorLight = colorLight;
 
-const colorDark = Vaadin.css`
+    const colorDark = Vaadin.css`
 MAGI ADD END -->
 
 <!-- MAGI REMOVE START -->
@@ -190,12 +190,12 @@ MAGI ADD END -->
 </dom-module>
 <!-- MAGI REMOVE END -->
 <!-- MAGI ADD START
-`;
-Vaadin.registerStyles('', colorDark, {moduleId: 'material-color-dark'});
+    `;
+    Vaadin.registerStyles('', colorDark, {moduleId: 'material-color-dark'});
 
-Vaadin.MaterialStyles.colorDark = colorDark;
+    Vaadin.MaterialStyles.colorDark = colorDark;
 
-const colorBase = Vaadin.css`
+    const colorBase = Vaadin.css`
 MAGI ADD END -->
 <!-- MAGI REMOVE START -->
 <custom-style>
@@ -232,12 +232,12 @@ MAGI ADD END -->
 </custom-style>
 <!-- MAGI REMOVE END -->
 <!-- MAGI ADD START
-`;
-const $tpl = document.createElement('template');
-$tpl.innerHTML = `<custom-style><style>${colorBase.toString().replace(':host', 'html')}</style></custom-style>`;
-document.head.appendChild($tpl.content);
+    `;
+    const $tpl = document.createElement('template');
+    $tpl.innerHTML = `<custom-style><style>${colorBase.toString().replace(':host', 'html')}</style></custom-style>`;
+    document.head.appendChild($tpl.content);
 
-Vaadin.MaterialStyles.colorBase = colorBase;
-})();
+    Vaadin.MaterialStyles.colorBase = colorBase;
+  })();
 </script>
 MAGI ADD END -->
