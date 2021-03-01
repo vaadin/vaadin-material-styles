@@ -1,5 +1,4 @@
 import './version.js';
-import '@polymer/polymer/lib/elements/custom-style.js';
 import { css, registerStyles } from '@vaadin/vaadin-themable-mixin/register-styles.js';
 const font = css`
 :host {
@@ -23,7 +22,7 @@ const font = css`
 }
 `;
 const $tpl = document.createElement('template');
-$tpl.innerHTML = `<custom-style><style>${font.toString().replace(':host', 'html')}</style></custom-style>`;
+$tpl.innerHTML = `<style>${font.toString().replace(':host', 'html')}</style>`;
 document.head.appendChild($tpl.content);
 
 export { font };
@@ -114,12 +113,8 @@ const typography = css`
 registerStyles('', typography, {moduleId: 'material-typography'});
 
 export { typography };
+
 /* Import Roboto from Google Fonts */
-/*
-  FIXME(polymer-modulizer): the above comments were extracted
-  from HTML and may be out of place here. Review them and
-  then delete this comment!
-*/
 if (!window.polymerSkipLoadingFontRoboto) {
   const font = 'https://fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,300,300italic,400italic,500,500italic,700,700italic';
   const link = document.createElement('link');

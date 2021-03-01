@@ -1,5 +1,4 @@
 import './version.js';
-import '@polymer/polymer/lib/elements/custom-style.js';
 import { css, registerStyles } from '@vaadin/vaadin-themable-mixin/register-styles.js';
 const colorLight = css`
   :host,
@@ -178,7 +177,7 @@ const colorBase = css`
 }
 `;
 const $tpl = document.createElement('template');
-$tpl.innerHTML = `<custom-style><style>${colorBase.toString().replace(':host', 'html')}</style></custom-style>`;
+$tpl.innerHTML = `<style>${colorBase.toString().replace(':host', 'html')}</style>`;
 document.head.appendChild($tpl.content);
 
 export { colorBase };
