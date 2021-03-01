@@ -1,8 +1,8 @@
-<!-- NOTICE: Generated with 'gulp icons' -->
-<link rel="import" href="../polymer/lib/elements/custom-style.html">
-<link rel="import" href="version.html">
+import '@polymer/polymer/lib/elements/custom-style.js';
+import './version.js';
+const $_documentContainer = document.createElement('template');
 
-<custom-style>
+$_documentContainer.innerHTML = `<custom-style>
   <style>
     @font-face {
       font-family: 'material-icons';
@@ -12,21 +12,31 @@
     }
 
     html {
-      --material-icons-arrow-downward: "\ea01";
-      --material-icons-arrow-upward: "\ea02";
-      --material-icons-calendar: "\ea03";
-      --material-icons-check: "\ea04";
-      --material-icons-chevron-left: "\ea05";
-      --material-icons-chevron-right: "\ea06";
-      --material-icons-clear: "\ea07";
-      --material-icons-clock: "\ea08";
-      --material-icons-dropdown: "\ea09";
-      --material-icons-error: "\ea0a";
-      --material-icons-eye: "\ea0b";
-      --material-icons-eye-disabled: "\ea0c";
-      --material-icons-play: "\ea0d";
-      --material-icons-reload: "\ea0e";
-      --material-icons-upload: "\ea0f";
+      --material-icons-arrow-downward: "\\ea01";
+      --material-icons-arrow-upward: "\\ea02";
+      --material-icons-calendar: "\\ea03";
+      --material-icons-check: "\\ea04";
+      --material-icons-chevron-left: "\\ea05";
+      --material-icons-chevron-right: "\\ea06";
+      --material-icons-clear: "\\ea07";
+      --material-icons-clock: "\\ea08";
+      --material-icons-dropdown: "\\ea09";
+      --material-icons-error: "\\ea0a";
+      --material-icons-eye: "\\ea0b";
+      --material-icons-eye-disabled: "\\ea0c";
+      --material-icons-play: "\\ea0d";
+      --material-icons-reload: "\\ea0e";
+      --material-icons-upload: "\\ea0f";
     }
   </style>
-</custom-style>
+</custom-style>`;
+
+document.head.appendChild($_documentContainer.content);
+
+/* NOTICE: Generated with 'gulp icons' */
+/*
+  FIXME(polymer-modulizer): the above comments were extracted
+  from HTML and may be out of place here. Review them and
+  then delete this comment!
+*/
+;

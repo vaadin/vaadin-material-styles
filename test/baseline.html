@@ -4,11 +4,22 @@
     <meta charset="utf-8">
     <title>Material components baseline test</title>
     <meta name="viewport" content="width=device-width">
-    <script src="../../webcomponentsjs/webcomponents-loader.js"></script>
-    <link rel="import" href="../../iron-icons/iron-icons.html">
-    <link rel="import" href="all-theme-imports.html">
-    <link rel="import" href="all-src-imports.html">
-    <custom-style>
+    <script src="../../../@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script type="module" src="../../../@polymer/iron-icons/iron-icons.js"></script>
+    <script type="module" src="./all-theme-imports.js"></script>
+    <script type="module" src="./all-src-imports.js"></script>
+    <!-- FIXME(polymer-modulizer):
+        These imperative modules that innerHTML your HTML are
+        a hacky way to be sure that any mixins in included style
+        modules are ready before any elements that reference them are
+        instantiated, otherwise the CSS @apply mixin polyfill won't be
+        able to expand the underlying CSS custom properties.
+        See: https://github.com/Polymer/polymer-modulizer/issues/154
+        -->
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<custom-style>
       <style include="material-typography">
         body {
           margin: 0 50px;
@@ -50,35 +61,87 @@
           width: 16em;
         }
       </style>
-    </custom-style>
+    </custom-style>`;
 
-    <custom-style>
+document.body.appendChild($_documentContainer.content);
+</script>
+
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<custom-style>
       <style include="material-typography"></style>
-    </custom-style>
+    </custom-style>`;
+
+document.body.appendChild($_documentContainer.content);
+</script>
   </head>
   <body unresolved>
 
-    <h2>Baseline line context</h2>
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<h2>Baseline line context</h2>`;
+document.body.appendChild($_documentContainer.content);
+</script>
 
-    <strong>&lt;vaadin-text-field&gt;</strong>
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<strong>&lt;vaadin-text-field&gt;</strong>`;
+document.body.appendChild($_documentContainer.content);
+</script>
     zzz
-    <vaadin-text-field value="zzz only value"></vaadin-text-field>
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<vaadin-text-field value="zzz only value"></vaadin-text-field>`;
+document.body.appendChild($_documentContainer.content);
+</script>
     zzz
-    <vaadin-text-field label="zzz only label"></vaadin-text-field>
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<vaadin-text-field label="zzz only label"></vaadin-text-field>`;
+document.body.appendChild($_documentContainer.content);
+</script>
     zzz
-    <vaadin-text-field label="zzz label" value="zzz value"></vaadin-text-field>
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<vaadin-text-field label="zzz label" value="zzz value"></vaadin-text-field>`;
+document.body.appendChild($_documentContainer.content);
+</script>
 
-    <br>
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<br>`;
+document.body.appendChild($_documentContainer.content);
+</script>
 
-    <strong>&lt;vaadin-password-field&gt;</strong>
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<strong>&lt;vaadin-password-field&gt;</strong>`;
+document.body.appendChild($_documentContainer.content);
+</script>
     zzz
-    <vaadin-password-field value="zzz only value" password-visible></vaadin-password-field>
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<vaadin-password-field value="zzz only value" password-visible=""></vaadin-password-field>`;
+document.body.appendChild($_documentContainer.content);
+</script>
     zzz
-    <vaadin-password-field label="zzz only label" password-visible></vaadin-password-field>
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<vaadin-password-field label="zzz only label" password-visible=""></vaadin-password-field>`;
+document.body.appendChild($_documentContainer.content);
+</script>
     zzz
-    <vaadin-password-field label="zzz label" value="zzz value" password-visible></vaadin-password-field>
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<vaadin-password-field label="zzz label" value="zzz value" password-visible=""></vaadin-password-field>`;
+document.body.appendChild($_documentContainer.content);
+</script>
 
-    <div style="height: 100px;">
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<div style="height: 100px;">
     <strong>&lt;vaadin-text-area&gt;</strong>
     zzz
     <vaadin-text-area value="zzz only value" rows="1"></vaadin-text-area>
@@ -86,72 +149,168 @@
     <vaadin-text-area label="zzz only label" rows="1"></vaadin-text-area>
     zzz
     <vaadin-text-area label="zzz label" value="zzz value"></vaadin-text-area>
-    </div>
+    </div>`;
 
-    <br>
+document.body.appendChild($_documentContainer.content);
+</script>
 
-    <strong>&lt;vaadin-combo-box&gt;</strong>
-    zzz
-    <vaadin-combo-box value="zzz only value" allow-custom-value></vaadin-combo-box>
-    zzz
-    <vaadin-combo-box label="zzz only label" allow-custom-value></vaadin-combo-box>
-    zzz
-    <vaadin-combo-box label="zzz label" value="zzz value" allow-custom-value></vaadin-combo-box>
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<br>`;
+document.body.appendChild($_documentContainer.content);
+</script>
 
-    <br>
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<strong>&lt;vaadin-combo-box&gt;</strong>`;
+document.body.appendChild($_documentContainer.content);
+</script>
+    zzz
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<vaadin-combo-box value="zzz only value" allow-custom-value=""></vaadin-combo-box>`;
+document.body.appendChild($_documentContainer.content);
+</script>
+    zzz
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<vaadin-combo-box label="zzz only label" allow-custom-value=""></vaadin-combo-box>`;
+document.body.appendChild($_documentContainer.content);
+</script>
+    zzz
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<vaadin-combo-box label="zzz label" value="zzz value" allow-custom-value=""></vaadin-combo-box>`;
+document.body.appendChild($_documentContainer.content);
+</script>
 
-    <strong>&lt;vaadin-date-picker&gt;</strong>
-    zzz
-    <vaadin-date-picker value="2010-01-01"></vaadin-date-picker>
-    zzz
-    <vaadin-date-picker label="zzz only label"></vaadin-date-picker>
-    zzz
-    <vaadin-date-picker label="zzz label" value="2010-01-01"></vaadin-date-picker>
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<br>`;
+document.body.appendChild($_documentContainer.content);
+</script>
 
-    <br>
-
-    <strong>&lt;vaadin-select&gt;</strong>
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<strong>&lt;vaadin-date-picker&gt;</strong>`;
+document.body.appendChild($_documentContainer.content);
+</script>
     zzz
-    <vaadin-select value="zzz">
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<vaadin-date-picker value="2010-01-01"></vaadin-date-picker>`;
+document.body.appendChild($_documentContainer.content);
+</script>
+    zzz
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<vaadin-date-picker label="zzz only label"></vaadin-date-picker>`;
+document.body.appendChild($_documentContainer.content);
+</script>
+    zzz
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<vaadin-date-picker label="zzz label" value="2010-01-01"></vaadin-date-picker>`;
+document.body.appendChild($_documentContainer.content);
+</script>
+
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<br>`;
+document.body.appendChild($_documentContainer.content);
+</script>
+
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<strong>&lt;vaadin-select&gt;</strong>`;
+document.body.appendChild($_documentContainer.content);
+</script>
+    zzz
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<vaadin-select value="zzz">
       <template>
         <vaadin-list-box>
           <vaadin-item>zzz</vaadin-item>
           <vaadin-item>xxx</vaadin-item>
         </vaadin-list-box>
       </template>
-    </vaadin-select>
+    </vaadin-select>`;
+
+document.body.appendChild($_documentContainer.content);
+</script>
     zzz
-    <vaadin-select label="zzz only label">
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<vaadin-select label="zzz only label">
       <template>
         <vaadin-list-box>
           <vaadin-item>zzz</vaadin-item>
           <vaadin-item>xxx</vaadin-item>
         </vaadin-list-box>
       </template>
-    </vaadin-select>
+    </vaadin-select>`;
+
+document.body.appendChild($_documentContainer.content);
+</script>
     zzz
-    <vaadin-select label="zzz label" value="zzz">
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<vaadin-select label="zzz label" value="zzz">
       <template>
         <vaadin-list-box>
           <vaadin-item>zzz</vaadin-item>
           <vaadin-item>xxx</vaadin-item>
         </vaadin-list-box>
       </template>
-    </vaadin-select>
+    </vaadin-select>`;
 
-    <br>
+document.body.appendChild($_documentContainer.content);
+</script>
 
-    <strong>&lt;vaadin-button&gt;</strong>
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<br>`;
+document.body.appendChild($_documentContainer.content);
+</script>
+
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<strong>&lt;vaadin-button&gt;</strong>`;
+document.body.appendChild($_documentContainer.content);
+</script>
     zzz
-    <vaadin-button>zzz</vaadin-button>
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<vaadin-button>zzz</vaadin-button>`;
+document.body.appendChild($_documentContainer.content);
+</script>
     zzz
-    <vaadin-button theme="outlined">zzz</vaadin-button>
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<vaadin-button theme="outlined">zzz</vaadin-button>`;
+document.body.appendChild($_documentContainer.content);
+</script>
     zzz
-    <vaadin-button theme="contained">zzz</vaadin-button>
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<vaadin-button theme="contained">zzz</vaadin-button>`;
+document.body.appendChild($_documentContainer.content);
+</script>
 
-    <h2>Baseline flex context</h2>
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<h2>Baseline flex context</h2>`;
+document.body.appendChild($_documentContainer.content);
+</script>
 
-    <div class="flex-baseline">
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<div class="flex-baseline">
       <strong>&lt;vaadin-text-field&gt;</strong>
       zzz
       <vaadin-text-field value="zzz only value"></vaadin-text-field>
@@ -159,19 +318,31 @@
       <vaadin-text-field label="zzz only label"></vaadin-text-field>
       zzz
       <vaadin-text-field label="zzz label" value="zzz value"></vaadin-text-field>
-    </div>
+    </div>`;
 
-    <div class="flex-baseline">
+document.body.appendChild($_documentContainer.content);
+</script>
+
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<div class="flex-baseline">
       <strong>&lt;vaadin-password-field&gt;</strong>
       zzz
-      <vaadin-password-field value="zzz only value" password-visible></vaadin-password-field>
+      <vaadin-password-field value="zzz only value" password-visible=""></vaadin-password-field>
       zzz
-      <vaadin-password-field label="zzz only label" password-visible></vaadin-password-field>
+      <vaadin-password-field label="zzz only label" password-visible=""></vaadin-password-field>
       zzz
-      <vaadin-password-field label="zzz label" value="zzz value" password-visible></vaadin-password-field>
-    </div>
+      <vaadin-password-field label="zzz label" value="zzz value" password-visible=""></vaadin-password-field>
+    </div>`;
 
-    <div class="flex-baseline" style="height: 100px;">
+document.body.appendChild($_documentContainer.content);
+</script>
+
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<div class="flex-baseline" style="height: 100px;">
       <strong>&lt;vaadin-text-area&gt;</strong>
       zzz
       <vaadin-text-area value="zzz only value" rows="1"></vaadin-text-area>
@@ -179,19 +350,31 @@
       <vaadin-text-area label="zzz only label" rows="1"></vaadin-text-area>
       zzz
       <vaadin-text-area label="zzz label" value="zzz value"></vaadin-text-area>
-    </div>
+    </div>`;
 
-    <div class="flex-baseline">
+document.body.appendChild($_documentContainer.content);
+</script>
+
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<div class="flex-baseline">
       <strong>&lt;vaadin-combo-box&gt;</strong>
       zzz
-      <vaadin-combo-box value="zzz only value" allow-custom-value></vaadin-combo-box>
+      <vaadin-combo-box value="zzz only value" allow-custom-value=""></vaadin-combo-box>
       zzz
-      <vaadin-combo-box label="zzz only label" allow-custom-value></vaadin-combo-box>
+      <vaadin-combo-box label="zzz only label" allow-custom-value=""></vaadin-combo-box>
       zzz
-      <vaadin-combo-box label="zzz label" value="zzz value" allow-custom-value></vaadin-combo-box>
-    </div>
+      <vaadin-combo-box label="zzz label" value="zzz value" allow-custom-value=""></vaadin-combo-box>
+    </div>`;
 
-    <div class="flex-baseline">
+document.body.appendChild($_documentContainer.content);
+</script>
+
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<div class="flex-baseline">
       <strong>&lt;vaadin-date-picker&gt;</strong>
       zzz
       <vaadin-date-picker value="2010-01-01"></vaadin-date-picker>
@@ -199,9 +382,15 @@
       <vaadin-date-picker label="zzz only label"></vaadin-date-picker>
       zzz
       <vaadin-date-picker label="zzz label" value="2010-01-01"></vaadin-date-picker>
-    </div>
+    </div>`;
 
-    <div class="flex-baseline">
+document.body.appendChild($_documentContainer.content);
+</script>
+
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<div class="flex-baseline">
       <strong>&lt;vaadin-select&gt;</strong>
       zzz
       <vaadin-select value="zzz">
@@ -230,9 +419,15 @@
           </vaadin-list-box>
         </template>
       </vaadin-select>
-    </div>
+    </div>`;
 
-    <div class="flex-baseline">
+document.body.appendChild($_documentContainer.content);
+</script>
+
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<div class="flex-baseline">
       <strong>&lt;vaadin-button&gt;</strong>
       zzz
       <vaadin-button>zzz</vaadin-button>
@@ -240,7 +435,10 @@
       <vaadin-button theme="outlined">zzz</vaadin-button>
       zzz
       <vaadin-button theme="contained">zzz</vaadin-button>
-    </div>
+    </div>`;
+
+document.body.appendChild($_documentContainer.content);
+</script>
 
   </body>
 </html
