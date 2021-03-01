@@ -1,3 +1,8 @@
+/**
+ * @license
+ * Copyright (c) 2021 Vaadin Ltd.
+ * This program is available under Apache License Version 2.0, available at https://vaadin.com/license/
+ */
 import './mixins/field-button.js';
 export * from './mixins/field-button.js';
 import './mixins/menu-overlay.js';
@@ -14,9 +19,3 @@ import './shadow.js';
 export * from './shadow.js';
 import './typography.js';
 export * from './typography.js';
-
-/**
-@license
-Copyright (c) 2019 Vaadin Ltd.
-This program is available under Apache License Version 2.0, available at https://vaadin.com/license/
-*/
