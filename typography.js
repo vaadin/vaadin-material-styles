@@ -1,31 +1,31 @@
-import './version.js';
 import { css, registerStyles } from '@vaadin/vaadin-themable-mixin/register-styles.js';
+import './version.js';
+
 const font = css`
-:host {
-  /* Font family */
-  --material-font-family: 'Roboto', sans-serif;
+  :host {
+    /* Font family */
+    --material-font-family: 'Roboto', sans-serif;
 
-  /* Font sizes */
-  --material-h1-font-size: 6rem;
-  --material-h2-font-size: 3.75rem;
-  --material-h3-font-size: 3rem;
-  --material-h4-font-size: 2.125rem;
-  --material-h5-font-size: 1.5rem;
-  --material-h6-font-size: 1.25rem;
-  --material-body-font-size: 1rem;
-  --material-small-font-size: 0.875rem;
-  --material-button-font-size: 0.875rem;
-  --material-caption-font-size: 0.75rem;
+    /* Font sizes */
+    --material-h1-font-size: 6rem;
+    --material-h2-font-size: 3.75rem;
+    --material-h3-font-size: 3rem;
+    --material-h4-font-size: 2.125rem;
+    --material-h5-font-size: 1.5rem;
+    --material-h6-font-size: 1.25rem;
+    --material-body-font-size: 1rem;
+    --material-small-font-size: 0.875rem;
+    --material-button-font-size: 0.875rem;
+    --material-caption-font-size: 0.75rem;
 
-  /* Icon size */
-  --material-icon-font-size: 20px;
-}
+    /* Icon size */
+    --material-icon-font-size: 20px;
+  }
 `;
+
 const $tpl = document.createElement('template');
 $tpl.innerHTML = `<style>${font.toString().replace(':host', 'html')}</style>`;
 document.head.appendChild($tpl.content);
-
-export { font };
 
 const typography = css`
   body {
@@ -110,12 +110,13 @@ const typography = css`
     font-weight: 500;
   }
 `;
-registerStyles('', typography, {moduleId: 'material-typography'});
+registerStyles('', typography, { moduleId: 'material-typography' });
 
-export { typography };
+export { font, typography };
 
 /* Import Roboto from Google Fonts */
 if (!window.polymerSkipLoadingFontRoboto) {
+  /* prettier-ignore */
   const font = 'https://fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,300,300italic,400italic,500,500italic,700,700italic';
   const link = document.createElement('link');
   link.rel = 'stylesheet';

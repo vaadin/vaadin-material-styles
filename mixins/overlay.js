@@ -1,7 +1,8 @@
+import { css, registerStyles } from '@vaadin/vaadin-themable-mixin/register-styles.js';
 import '../color.js';
 import '../typography.js';
 import '../shadow.js';
-import { css, registerStyles } from '@vaadin/vaadin-themable-mixin/register-styles.js';
+
 const overlay = css`
   :host {
     top: 16px;
@@ -11,7 +12,7 @@ const overlay = css`
     left: 16px;
   }
 
-  [part="overlay"] {
+  [part='overlay'] {
     background-color: var(--material-background-color);
     border-radius: 4px;
     box-shadow: var(--material-shadow-elevation-4dp);
@@ -21,11 +22,11 @@ const overlay = css`
     font-weight: 400;
   }
 
-  [part="content"] {
+  [part='content'] {
     padding: 8px 0;
   }
 
-  [part="backdrop"] {
+  [part='backdrop'] {
     opacity: 0.2;
     animation: 0.2s vaadin-overlay-backdrop-enter;
     will-change: opacity;
@@ -37,6 +38,7 @@ const overlay = css`
     }
   }
 `;
-registerStyles('', overlay, {moduleId: 'material-overlay'});
+
+registerStyles('', overlay, { moduleId: 'material-overlay' });
 
 export { overlay };

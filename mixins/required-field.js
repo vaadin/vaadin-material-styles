@@ -1,7 +1,8 @@
-import '../color.js';
 import { css, registerStyles } from '@vaadin/vaadin-themable-mixin/register-styles.js';
+import '../color.js';
+
 const requiredField = css`
-  [part="label"] {
+  [part='label'] {
     display: block;
     position: absolute;
     top: 8px;
@@ -17,35 +18,35 @@ const requiredField = css`
     transform: scale(0.75);
   }
 
-  :host([required]) [part="label"]::after {
-    content: " *";
+  :host([required]) [part='label']::after {
+    content: ' *';
     color: inherit;
   }
 
-  :host([invalid]) [part="label"] {
+  :host([invalid]) [part='label'] {
     color: var(--material-error-text-color);
   }
 
-  [part="error-message"] {
-    font-size: .75em;
+  [part='error-message'] {
+    font-size: 0.75em;
     line-height: 1;
     color: var(--material-error-text-color);
   }
 
   /* Margin that doesn’t reserve space when there’s no error message */
-  [part="error-message"]:not(:empty)::before {
-    content: "";
+  [part='error-message']:not(:empty)::before {
+    content: '';
     display: block;
     height: 6px;
   }
 
-  :host(:not([invalid])) [part="error-message"] {
+  :host(:not([invalid])) [part='error-message'] {
     margin-top: 0;
     max-height: 0;
     overflow: hidden;
   }
 
-  :host([invalid]) [part="error-message"] {
+  :host([invalid]) [part='error-message'] {
     animation: reveal 0.2s;
   }
 
@@ -56,10 +57,11 @@ const requiredField = css`
   }
 
   /* RTL specific styles */
-  :host([dir="rtl"]) [part="label"] {
+  :host([dir='rtl']) [part='label'] {
     transform-origin: 100% 75%;
   }
 `;
-registerStyles('', requiredField, {moduleId: 'material-required-field'});
+
+registerStyles('', requiredField, { moduleId: 'material-required-field' });
 
 export { requiredField };

@@ -1,5 +1,6 @@
-import './version.js';
 import { css, registerStyles } from '@vaadin/vaadin-themable-mixin/register-styles.js';
+import './version.js';
+
 const colorLight = css`
   :host,
   #host-fix {
@@ -47,7 +48,7 @@ const colorLight = css`
     color: var(--material-body-text-color);
   }
 
-  [theme~="dark"] {
+  [theme~='dark'] {
     /* Text colors */
     --material-body-text-color: var(--dark-theme-text-color, rgba(255, 255, 255, 1));
     --material-secondary-text-color: var(--dark-theme-secondary-color, rgba(255, 255, 255, 0.7));
@@ -96,9 +97,8 @@ const colorLight = css`
     color: inherit;
   }
 `;
-registerStyles('', colorLight, {moduleId: 'material-color-light'});
 
-export { colorLight };
+registerStyles('', colorLight, { moduleId: 'material-color-light' });
 
 const colorDark = css`
   :host,
@@ -147,37 +147,37 @@ const colorDark = css`
     color: var(--material-body-text-color);
   }
 `;
-registerStyles('', colorDark, {moduleId: 'material-color-dark'});
 
-export { colorDark };
+registerStyles('', colorDark, { moduleId: 'material-color-dark' });
 
 const colorBase = css`
-:host {
-  /* Text colors */
-  --material-body-text-color: var(--light-theme-text-color, rgba(0, 0, 0, 0.87));
-  --material-secondary-text-color: var(--light-theme-secondary-color, rgba(0, 0, 0, 0.54));
-  --material-disabled-text-color: var(--light-theme-disabled-color, rgba(0, 0, 0, 0.38));
+  :host {
+    /* Text colors */
+    --material-body-text-color: var(--light-theme-text-color, rgba(0, 0, 0, 0.87));
+    --material-secondary-text-color: var(--light-theme-secondary-color, rgba(0, 0, 0, 0.54));
+    --material-disabled-text-color: var(--light-theme-disabled-color, rgba(0, 0, 0, 0.38));
 
-  /* Primary colors */
-  --material-primary-color: var(--primary-color, #6200ee);
-  --material-primary-contrast-color: var(--dark-theme-base-color, #fff);
-  --material-primary-text-color: var(--material-primary-color);
+    /* Primary colors */
+    --material-primary-color: var(--primary-color, #6200ee);
+    --material-primary-contrast-color: var(--dark-theme-base-color, #fff);
+    --material-primary-text-color: var(--material-primary-color);
 
-  /* Error colors */
-  --material-error-color: var(--error-color, #b00020);
-  --material-error-text-color: var(--material-error-color);
+    /* Error colors */
+    --material-error-color: var(--error-color, #b00020);
+    --material-error-text-color: var(--material-error-color);
 
-  /* Background colors */
-  --material-background-color: var(--light-theme-background-color, #fff);
-  --material-secondary-background-color: var(--light-theme-secondary-background-color, #f5f5f5);
-  --material-disabled-color: rgba(0, 0, 0, 0.26);
+    /* Background colors */
+    --material-background-color: var(--light-theme-background-color, #fff);
+    --material-secondary-background-color: var(--light-theme-secondary-background-color, #f5f5f5);
+    --material-disabled-color: rgba(0, 0, 0, 0.26);
 
-  /* Divider colors */
-  --material-divider-color: rgba(0, 0, 0, 0.12);
-}
+    /* Divider colors */
+    --material-divider-color: rgba(0, 0, 0, 0.12);
+  }
 `;
+
 const $tpl = document.createElement('template');
 $tpl.innerHTML = `<style>${colorBase.toString().replace(':host', 'html')}</style>`;
 document.head.appendChild($tpl.content);
 
-export { colorBase };
+export { colorBase, colorDark, colorLight };
