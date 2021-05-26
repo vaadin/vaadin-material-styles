@@ -1,17 +1,13 @@
-[![npm version](https://badgen.net/npm/v/@vaadin/vaadin-material-styles)](https://www.npmjs.com/package/@vaadin/vaadin-material-styles)
-[![Bower version](https://badgen.net/github/release/vaadin/vaadin-material-styles)](https://github.com/vaadin/vaadin-material-styles/releases)
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/vaadin/web-components?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-
 # Material Theme for Vaadin components
 
-> ⚠️ 　Starting from Vaadin 20, this project has migrated to [`vaadin-web-components`](https://github.com/vaadin/vaadin-web-components/tree/master/packages/vaadin-material-styles) *monorepository*.
->
-> This repository is used for Vaadin 14 LTS and Vaadin 19.
-
----
+> ⚠️ Starting from Vaadin 20, the source code and issues for this package are migrated to the [`vaadin/web-components`](https://github.com/vaadin/web-components/tree/master/packages/vaadin-material-styles) monorepository.
+> This repository contains the source code and releases of `@vaadin/vaadin-material-styles` for the Vaadin versions 10 to 19.
 
 `vaadin-material-styles` is customizable theme for the [Vaadin components](https://vaadin.com/components).
 
+[![npm version](https://badgen.net/npm/v/@vaadin/vaadin-material-styles)](https://www.npmjs.com/package/@vaadin/vaadin-material-styles)
+[![Bower version](https://badgen.net/github/release/vaadin/vaadin-material-styles)](https://github.com/vaadin/vaadin-material-styles/releases)
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/vaadin/web-components?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 ## Running demos and tests in browser
 
