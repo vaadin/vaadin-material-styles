@@ -19,8 +19,8 @@ gulp.task('lint:js', async function() {
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError('fail'))
-    .on('error', function(err) {
-      // return console.error(err);
+    .on('error', function() {
+      process.exit(1);
     });
 });
 
@@ -37,8 +37,8 @@ gulp.task('lint:html', async function() {
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError('fail'))
-    .on('error', function(err) {
-      // return console.error(err);
+    .on('error', function() {
+      process.exit(1);
     });
 });
 
@@ -56,8 +56,8 @@ gulp.task('lint:css', async function() {
         {formatter: 'string', console: true}
       ]
     }))
-    .on('error', function(err) {
-      // return console.error(err);
+    .on('error', function() {
+      process.exit(1);
     });
 });
 
